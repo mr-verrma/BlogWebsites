@@ -1,0 +1,13 @@
+<% layout('layouts/boilerPlate') %>
+<h1 style="padding-top: 25px;">Edit </h1>
+    <form action="/<%=blog._id%>/?_method=PUT " class="needs-validation" novalidate method="POST">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input name="title" class="form-control" value="<%=blog.title%>" id="exampleInputEmail1" required>
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">Content</label>
+          <textarea name="content" class="form-control" id="" cols="30" rows="5" ><%=blog.content%></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary delpadding">Save</button>
+    </form>

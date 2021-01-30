@@ -1,0 +1,17 @@
+<% layout('layouts/boilerPlate') %>
+<h1 style="padding-top: 25px;">Show Page </h1>
+<div class="container-sm">
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title"><%= blog.title%></h1>
+      <p class="card-text"><%= blog.content%> </p>
+      <div class="card-body">
+      <a class="btn btn-warning" href="/<%=blog._id%>/edit">Edit</a>
+      <form class="d-inline " action="/<%=blog._id%>/?_method=DELETE" method="POST">
+        <button class="btn btn-danger" type="submit">Delete</button>
+    </div>
+    
+    </form>
+  </div>
+</div>
+

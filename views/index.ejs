@@ -1,0 +1,14 @@
+<% layout('layouts/boilerPlate') %>
+<h1 style="padding-top: 25px;">All Posts </h1>
+<% for(let c of blog){ %>
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col">
+                <div class="card-body">
+                    <h2 class="card-title"><a class="nounderline" href="/<%= c._id %>"><%= c.title %> </a> </h2>
+                    <p class="card-text"><%= c.content.substring(0, 280) + " ..."%><a href="/<%=c._id%>">Read More</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<% }%>
